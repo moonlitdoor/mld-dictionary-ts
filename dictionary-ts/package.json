@@ -1,0 +1,29 @@
+{
+  "name": "dictionary-ts",
+  "description": "A Dictionary library",
+  "version": "0.0.1",
+  "repository": "github:moonlitdoor/mld-dictionary-ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf main/out && rm -rf  .nyc_output && rm -rf coverage",
+    "build": "tsc",
+    "format": "prettier --write \"main/src/**/*.ts\"",
+    "lint": "tslint --project ./tsconfig.json",
+    "test": "jasmine-ts --config=jasmine.json",
+    "coverage": "nyc --clean --reporter=html --reporter=text --extension .ts --exclude \"test/src/*.test.ts\" npm run test"
+  },
+  "files": [
+    "main/out/**/*"
+  ],
+  "devDependencies": {
+    "@types/jasmine": "3.5.10",
+    "jasmine": "3.5.0",
+    "jasmine-ts": "0.3.0",
+    "nyc": "15.0.1",
+    "prettier": "2.0.3",
+    "ts-node": "8.8.2",
+    "tslint": "6.1.1",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.8.3"
+  }
+}

@@ -1,0 +1,9 @@
+lib
+node_modules
+.idea
+coverage
+.nyc_output
+
+*.js
+*.js.map
+*.d.ts
