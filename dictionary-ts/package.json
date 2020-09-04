@@ -1,7 +1,7 @@
 {
   "name": "dictionary-ts",
   "description": "A Dictionary library",
-  "version": "SNAPSHOT",
+  "version": "0.0.0-LOCAL",
   "repository": "github:moonlitdoor/mld-dictionary-ts",
   "license": "MIT",
   "scripts": {
