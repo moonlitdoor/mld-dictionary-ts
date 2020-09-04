@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const exec = require("child_process");
+const fs = require("fs");
+
+const rootPackageJs = require("./package.json")
+const modulePackageJs = require("./dictionary-ts/package.json")
+
+const gitDescribeTags = "git describe --tags";
+const gitStatusPorcelain = "git status --porcelain";
+
+(function () {
+    let describe = exec.execSync(gitDescribeTags).toString().trim();
+    if (exec.execSync(gitStatusPorcelain).toString().trim() !== "") {
+        let index = describe.indexOf("-g");
+        if (index !== -1) {
+            let withOutHash = describe.slice(0, index);
+            let withOutCommitCount = withOutHash.slice(0, withOutHash.indexOf("-") + 1)
+            let commitCount = withOutHash.slice(withOutHash.indexOf("-") + 1)
+            describe = withOutCommitCount + (Number.parseInt(commitCount) + 1) + "-SNAPSHOT"
+        } else {
+            describe = describe + "-1-SNAPSHOT";
+        }
+    }
+    rootPackageJs.version = describe;
+    modulePackageJs.version = describe;
+    fs.writeFileSync("./package.json", JSON.stringify(rootPackageJs, null, 2) + "\n");
+    fs.writeFileSync("./dictionary-ts/package.json", JSON.stringify(modulePackageJs, null, 2) + "\n");
+})();

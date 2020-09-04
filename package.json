@@ -1,6 +1,6 @@
 {
   "name": "mld-dictionary-ts",
-  "version": "0.0.1",
+  "version": "SNAPSHOT",
   "repository": "github:moonlitdoor/mld-dictionary-ts",
   "license": "MIT",
   "scripts": {
