@@ -13,12 +13,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: '0'
+          fetch-depth: "0"
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://npm.pkg.github.com"
       - name: Install
         run: npm install
+      - name: Version
+        run: version
       - name: Lint
         run: npm run lint
       - name: Build
         run: npm run build
       - name: Test
         run: npm run test
+      - name: Publish
+        run: npm publish
+        env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

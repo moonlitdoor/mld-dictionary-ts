@@ -7,6 +7,7 @@
     "postinstall": "cd dictionary-ts && npm install",
     "lint": "cd dictionary-ts && npm run lint",
     "build": "cd dictionary-ts && npm run build",
-    "test": "cd dictionary-ts && npm run test"
+    "test": "cd dictionary-ts && npm run test",
+    "clean": "cd dictionary-ts && npm run clean"
   }
 }
