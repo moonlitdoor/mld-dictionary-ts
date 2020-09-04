@@ -1,4 +1,4 @@
-name: Records Release CI
+name: Dictionary Release CI
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Dictionary Beta CI
+name: Dictionary CI
 
 on:
   push:

@@ -1,11 +1,12 @@
 {
   "name": "mld-dictionary-ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "repository": "github:moonlitdoor/mld-dictionary-ts",
   "license": "MIT",
   "scripts": {
     "postinstall": "cd dictionary-ts && npm install",
-    "build": "npm install && cd dictionary-ts && npm run build && npm run lint",
-    "lint": "tslint"
+    "lint": "cd dictionary-ts && npm run lint",
+    "build": "cd dictionary-ts && npm run build",
+    "test": "cd dictionary-ts && npm run test"
   }
 }
