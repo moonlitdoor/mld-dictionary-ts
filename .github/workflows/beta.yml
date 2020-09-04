@@ -21,7 +21,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Version
-        run: version
+        run: ./version
       - name: Lint
         run: npm run lint
       - name: Build
