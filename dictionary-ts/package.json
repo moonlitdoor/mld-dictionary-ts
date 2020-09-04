@@ -16,14 +16,14 @@
     "main/out/**/*"
   ],
   "devDependencies": {
-    "@types/jasmine": "3.5.10",
-    "jasmine": "3.5.0",
+    "@types/jasmine": "3.5.14",
+    "jasmine": "3.6.1",
     "jasmine-ts": "0.3.0",
-    "nyc": "15.0.1",
-    "prettier": "2.0.3",
-    "ts-node": "8.8.2",
-    "tslint": "6.1.1",
+    "nyc": "15.1.0",
+    "prettier": "2.1.1",
+    "ts-node": "9.0.0",
+    "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
-    "typescript": "3.8.3"
+    "typescript": "4.0.2"
   }
 }
