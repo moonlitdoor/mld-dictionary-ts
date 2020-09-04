@@ -29,6 +29,6 @@ jobs:
       - name: Test
         run: npm run test
       - name: Publish
-        run: npm login --registry=https://npm.pkg.github.com/ && npm publish
+        run: cd dictionary-ts && npm login --registry=https://npm.pkg.github.com/ && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
